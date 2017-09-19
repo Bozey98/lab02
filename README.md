@@ -11,16 +11,19 @@
 ## Tutorial
 
 ```bash
+//создание переменных
 $ export GITHUB_USERNAME=<имя_пользователя>
 $ export GIST_TOKEN=<сохраненный_токен>
 $ alias edit=<nano|vi|vim|subl>
 ```
 
 ```bash
+//устанавливаем gistup
 $ npm install -g gistup
 ```
 
 ```bash
+//сохраняем token в файл
 $ cat > ~/.gistup.json <<EOF
 {
   "token": "${GIST_TOKEN}"
@@ -29,21 +32,28 @@ EOF
 ```
 
 ```bash
+//создаем новые директории
 $ cd ~
 $ mkdir -p workspace/labs/projects/
 $ mkdir -p workspace/labs/tasks/
-$ mkdir -p workspace/labs/reports/
+$ mkdir -p workspace/labs/repotrs/
 ```
 
 ## Report
 
 ```bash
+//переходим в директорию .../labs
 $ cd ~/workspace/labs/
+//создаем переменную
 $ export LAB_NUMBER=02
+// клонируем 
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
+//создаем новую директорию
+$ mkdir repotrs/lab${LAB_NUMBER}
+//копируем файл README.md
+$ cp tasks/lab${LAB_NUMBER}/README.md repotrs/lab${LAB_NUMBER}/REPORT.md
+//переходим в директорию .../repotrs
+$ cd repotrs/lab${LAB_NUMBER}
 $ edit REPORT.md
 $ gistup -m "lab${LAB_NUMBER}"
 ```
