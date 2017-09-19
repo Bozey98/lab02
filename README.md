@@ -12,9 +12,9 @@
 
 ```bash
 //создание переменных
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=Bozey98
+$ export GIST_TOKEN=forlesson
+$ alias edit=vim
 ```
 
 ```bash
